@@ -25,6 +25,12 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
+**Mac / Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
 ## Demo
 
 > Ask any health question — the AI retrieves from 500K+ medical records + live PubMed abstracts and returns a cited answer in under 5 seconds.
