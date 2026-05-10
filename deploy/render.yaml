@@ -23,7 +23,7 @@ services:
         sync: false
 
       - key: AWS_REGION
-        value: us-east-1
+        value: us-east-2
 
       - key: PYTHONUNBUFFERED
         value: "1"
