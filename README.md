@@ -10,5 +10,5 @@ A production-grade, multi-agent RAG system for medical Q&A built with **LangGrap
 ## Demo
 
 > Ask any health question — the AI retrieves from 500K+ medical records + live PubMed abstracts and returns a cited answer in under 5 seconds.
-
+![Chat Interface](demo/1.png)
 ![Chat Interface](demo/2.png)
