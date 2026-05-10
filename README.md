@@ -31,6 +31,43 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
+### Step 3 — Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4 — Set up environment variables
+
+Create a `.env` file in the project root:
+
+```bash
+# Windows PowerShell
+New-Item .env -ItemType File
+notepad .env
+```
+
+Paste and fill in your values:
+
+```env
+# Groq LLM (free at console.groq.com)
+GROQ_API_KEY=gsk_your_groq_key_here
+
+# Flask session secret (generate below)
+FLASK_SECRET_KEY=your_random_hex_string
+
+# AWS S3 — vectorstore persistence
+AWS_ACCESS_KEY_ID=your_iam_access_key
+AWS_SECRET_ACCESS_KEY=your_iam_secret_key
+AWS_S3_BUCKET=medichat-vectorstore
+AWS_REGION=us-east-2
+```
+
+Generate a Flask secret key:
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
 ## Demo
 
 > Ask any health question — the AI retrieves from 500K+ medical records + live PubMed abstracts and returns a cited answer in under 5 seconds.
