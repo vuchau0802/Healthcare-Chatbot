@@ -6,7 +6,6 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-# ── Config ──────────────────────────────────────────────────────────────────
 CSV_PATH      = "data/cleaned_medical_25mb.csv"
 VECTORSTORE   = "vectorstore"
 EMBED_MODEL   = "sentence-transformers/all-MiniLM-L6-v2"
@@ -14,8 +13,6 @@ MAX_ROWS      = 5000   # increase from 500 to better recall coverage
 BATCH_SIZE    = 100
 CHUNK_SIZE    = 800    # characters per chunk
 CHUNK_OVERLAP = 150    # overlap keeps context across splits
-# ────────────────────────────────────────────────────────────────────────────
-
 
 def load_csv(path: str, max_rows: int) -> pd.DataFrame:
     print(f"Loading CSV from {path} …")
@@ -25,13 +22,7 @@ def load_csv(path: str, max_rows: int) -> pd.DataFrame:
     print(f"  Loaded {len(df)} usable rows")
     return df
 
-
 def build_documents(df: pd.DataFrame) -> list[Document]:
-    """
-    Each row becomes a structured document with rich metadata.
-    We split long doctor answers so retrieval can surface the
-    most relevant paragraph rather than a wall of text.
-    """
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
