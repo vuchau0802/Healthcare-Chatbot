@@ -1,6 +1,6 @@
 # Healthcare Chatbot — Multi-Agent AI Health Assistant
 
-A production-grade, multi-agent RAG system for medical Q&A built with **LangGraph**, **Groq (LLaMA-3.1-8B)**, **FAISS**, and **live PubMed evidence retrieval**. Evaluated with RAGAS over 50 curated medical Q&A pairs. Vectorstore persisted on **AWS S3**.
+A production-grade, multi-agent RAG system for medical Q&A built with **LangGraph**, **Groq (LLaMA-3.1-8B)**, **FAISS**, and **live PubMed evidence retrieval**. Vectorstore persisted on **AWS S3**.
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.1-green)](https://flask.palletsprojects.com)
