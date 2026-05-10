@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: medichat-multi-agent
+    runtime: docker
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    plan: free
+
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+
+      - key: AWS_S3_BUCKET
+        sync: false
+
+      - key: AWS_REGION
+        value: us-east-1
+
+      - key: PYTHONUNBUFFERED
+        value: "1"
+
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+
+    healthCheckPath: /health
+    autoDeploy: true
