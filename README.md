@@ -50,17 +50,12 @@ notepad .env
 Paste and fill in your values:
 
 ```env
-# Groq LLM (free at console.groq.com)
-GROQ_API_KEY=gsk_your_groq_key_here
-
-# Flask session secret (generate below)
+GROQ_API_KEY=gsk_your_groq_key
 FLASK_SECRET_KEY=your_random_hex_string
-
-# AWS S3 — vectorstore persistence
-AWS_ACCESS_KEY_ID=your_iam_access_key
-AWS_SECRET_ACCESS_KEY=your_iam_secret_key
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_S3_BUCKET=medichat-vectorstore
-AWS_REGION=us-east-2
+AWS_REGION=us-region
 ```
 
 ### Step 5 — Build the FAISS vectorstore
