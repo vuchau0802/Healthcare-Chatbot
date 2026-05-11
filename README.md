@@ -40,7 +40,6 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```bash
-# Windows PowerShell
 New-Item .env -ItemType File
 notepad .env
 ```
