@@ -63,9 +63,28 @@ AWS_S3_BUCKET=medichat-vectorstore
 AWS_REGION=us-east-2
 ```
 
-Generate a Flask secret key:
+### Step 5 — Build the FAISS vectorstore
+
 ```bash
-python -c "import secrets; print(secrets.token_hex(32))"
+python ingest.py
+```
+
+### Step 6 — Train the triage classifier
+
+```bash
+python agents/train_triage.py
+```
+
+### Step 7 — Upload vectorstore to AWS S3
+
+```bash
+python cloud/s3_store.py upload
+```
+
+### Step 8 — Run the app
+
+```bash
+python app.py
 ```
 
 ## Demo
