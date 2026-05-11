@@ -15,8 +15,6 @@ git clone https://github.com/vuchau0802/Healthcare-Chatbot.git
 cd Healthcare-Chatbot
 ```
 
----
-
 ### Step 2 — Create a virtual environment
 
 **Windows (PowerShell):**
